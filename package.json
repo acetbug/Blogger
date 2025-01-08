@@ -1,0 +1,42 @@
+{
+  "name": "blogger",
+  "displayName": "Blogger",
+  "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acetbug/Blogger.git"
+  },
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "blogger.newPost",
+        "title": "New Post"
+      }
+    ],
+    "configuration": {
+      "title": "Blogger",
+      "properties": {
+        "blogger.path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "The relative path to the blog directory"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./"
+  }
+}
